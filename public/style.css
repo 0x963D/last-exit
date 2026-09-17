@@ -14,6 +14,7 @@ dialog{background:#132226;color:var(--ink);border:1px solid #536460;width:min(57
 .location,.scene-status,.controls-foot{font-size:11px}.controls-foot{gap:12px}.controls-foot #metric{white-space:normal;text-align:right}.prop{min-height:44px}.documentation .fine-print{font-size:12px!important}footer a{display:inline-flex;align-items:center;min-height:36px}@media(max-width:600px){nav button{font-size:11px;min-height:44px;padding:8px}.scene-status{font-size:11px;letter-spacing:.07em}.speaker span{font-size:11px}.prop{font-size:11px;min-height:44px}.controls-foot{font-size:11px}.controls-foot #metric{max-width:145px}footer{font-size:11px;height:46px}.decision-path span{font-size:11px}#prop-help{max-width:175px}.explain{max-width:280px}.fine-print{font-size:11px!important}}
 html:has(body.docs){height:auto;overflow:auto}
 .game-shell{max-height:none}
+.global-notice{width:min(100%,1100px);padding-inline:24px;margin-inline:auto;flex:none}.global-notice:has(#error[hidden]):has(#quota-help[hidden]){display:none}
 .quota-note{color:var(--amber);font-size:13px;line-height:1.5;margin:12px 0}.quota-note a{display:inline-block;margin-left:6px;text-underline-offset:4px}
 .dialogue-area{flex-shrink:1;min-height:0;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--edge) transparent}.controls{flex-shrink:0}
 @media(min-aspect-ratio:2/1){

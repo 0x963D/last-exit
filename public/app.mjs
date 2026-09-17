@@ -14,6 +14,7 @@ function fillTranscript(){
   $('#transcript').replaceChildren();for(const row of game?.history||[]){const article=document.createElement('article'),who=document.createElement('strong'),p=document.createElement('p');who.textContent=row.speaker==='you'?'REN / YOU':row.speaker==='inspector'?'KADE':'OBSERVED';p.textContent=row.text;article.append(who,p);if(row.speaker==='event')article.className='event-entry';if(row.prop&&row.prop!=='none'){const small=document.createElement('small');small.textContent=row.prop==='manifest'?'Handed over the manifest':'Offered 600 credits';article.append(small);}$('#transcript').append(article);}
 }
 function render(){
+  $('#quota-help').hidden=available;
   const active=game?.status==='active',ended=game&&!active;
   document.body.classList.toggle('playing',!!active);document.body.classList.toggle('ended',!!ended);
   $('#intro').hidden=!!game;$('#encounter').hidden=!active;$('#ending').hidden=!ended;

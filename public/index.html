@@ -3,6 +3,7 @@
 <body><div class="game-shell">
 <div class="backdrop" aria-hidden="true"></div><div class="shade" aria-hidden="true"></div>
 <header><a class="wordmark" href="/" aria-label="Last Exit home">LAST EXIT<span class="logo-line"></span></a><span class="location">NACRE BORDER AUTHORITY <span>/</span> LANE 09</span><nav aria-label="Game information"><button id="briefing-toggle">Your brief</button><button id="log-toggle">Transcript</button><button id="sound-toggle" aria-pressed="false" title="Toggle ambient sound">Sound off</button></nav></header>
+<div class="global-notice"><p id="error" role="alert" hidden></p><p id="quota-help" class="quota-note" hidden>The checkpoint needs more demo credits. <a href="https://github.com/0x963D/last-exit/issues/new?title=More%20playtime%20for%20Last%20Exit" target="_blank" rel="noopener">Ask Dan to reopen it</a></p></div>
 <main>
 <section id="intro" class="intro">
 <h1>One gate.<br>One good lie.</h1>
@@ -19,7 +20,7 @@
 <div class="controls">
 <form id="reply-form"><label class="sr-only" for="reply">Your reply to Inspector Kade</label><textarea id="reply" maxlength="480" rows="2" placeholder="Keep your story straight…" required></textarea>
 <div class="reply-bottom"><div class="props" aria-label="An item to hand over with your reply"><button type="button" id="manifest" class="prop" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h6"/></svg><span>Slide manifest</span></button><button type="button" id="credits" class="prop" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20m-6 5h2"/></svg><span>Offer 600 credits</span></button></div><button class="primary reply-send" id="send" type="submit">Say it <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></button></div></form>
-<p id="error" role="alert" hidden></p><p id="quota-help" class="quota-note" hidden>The checkpoint needs more demo credits. <a href="https://github.com/0x963D/last-exit/issues/new?title=More%20playtime%20for%20Last%20Exit" target="_blank" rel="noopener">Ask Dan to reopen it</a></p><div class="controls-foot"><span id="prop-help">Items are handed over with your next reply.</span><span id="metric">Jev chooses. You deal with it.</span></div>
+<div class="controls-foot"><span id="prop-help">Items are handed over with your next reply.</span><span id="metric">Jev chooses. You deal with it.</span></div>
 </div></section>
 <section id="ending" class="ending" hidden aria-live="polite"><div class="ending-copy"><h1 id="ending-title"></h1><p id="ending-text"></p><p id="ending-stats" class="ending-stats"></p><div class="ending-actions"><button id="again" class="primary">Try another story</button><button id="share-card">Save result card</button><button id="receipt">Decision receipts</button></div><button id="control" class="control-link">Try an honest shipment</button><div id="decision-path" class="decision-path"></div></div></section>
 </main>
