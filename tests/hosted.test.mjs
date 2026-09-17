@@ -25,10 +25,12 @@ test('database budget conserves reservations across concurrent sessions, retries
     assert.equal(results.filter(r=>r[0].result.error==='quota').length,4);
     assert.equal(await balance(),2*reserve);
     const winner=results.findIndex(r=>r[0].result.state),sid=sids[winner],token=tokens[winner];
-    const next={...createGame('smuggler',sid),version:1};
+    const next={...createGame('smuggler',sid),version:1,status:'passed'};
     const finish=()=>sql`SELECT last_exit.finish_turn(${sid}::uuid,${token}::uuid,${JSON.stringify(next)}::jsonb,42) AS ok`;
     const finishes=await Promise.all([finish(),finish()]);
     assert.equal(finishes.filter(r=>r[0].ok).length,1);
+    const usage=await sql`SELECT event,total FROM last_exit.usage_daily WHERE budget_id=${bid}`;
+    assert.deepEqual(Object.fromEntries(usage.map(r=>[r.event,Number(r.total)])),{reply_completed:1,passed:1});
     assert.equal(await balance(),reserve+42);
     assert.equal((await begin(sid,randomUUID()))[0].result.error,'quota');
     await sql`UPDATE last_exit.budget SET cap_nano=${10*reserve} WHERE id=${bid}`;
@@ -48,6 +50,11 @@ test('database budget conserves reservations across concurrent sessions, retries
     assert.equal((await request('/api/turn',input,'')).code,'session');
     assert.equal((await request('/api/turn',{...input,text:'x'.repeat(481)})).status,400);
     assert.equal(queryCalls,0);
+    assert.equal((await request('/api/visit',{})).status,200);
+    assert.equal((await request('/api/visit',{},undefined,'https://evil.example')).status,403);
+    assert.equal(Number((await sql`SELECT total FROM last_exit.usage_daily WHERE budget_id=${bid} AND event='page_view'`)[0].total),1);
+    const started=await request('/api/start',{mode:'smuggler'});assert.equal(started.status,'active');sids.push(started.id);
+    assert.equal(Number((await sql`SELECT total FROM last_exit.usage_daily WHERE budget_id=${bid} AND event='started'`)[0].total),1);
     const before=await balance();
     assert.equal((await request('/api/turn',input)).code,'provider');
     assert.equal(await balance(),before+reserve);
@@ -58,6 +65,7 @@ test('database budget conserves reservations across concurrent sessions, retries
     assert.equal(queryCalls,1);
     assert.equal(await balance(),before+reserve);
   }finally{
+    await sql`DELETE FROM last_exit.usage_daily WHERE budget_id=${bid}`;
     await sql`DELETE FROM last_exit.reservations WHERE budget_id=${bid}`;
     for(const sid of sids)await sql`DELETE FROM last_exit.sessions WHERE id=${sid}::uuid`;
     await sql`DELETE FROM last_exit.budget WHERE id=${bid}`;

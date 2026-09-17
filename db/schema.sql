@@ -15,6 +15,13 @@ CREATE TABLE IF NOT EXISTS last_exit.reservations (
   session_id uuid NOT NULL, reserved_nano bigint NOT NULL, actual_nano bigint,
   created_at timestamptz NOT NULL DEFAULT now()
 );
+CREATE TABLE IF NOT EXISTS last_exit.usage_daily (
+  budget_id text NOT NULL REFERENCES last_exit.budget(id),
+  day date NOT NULL DEFAULT (now() AT TIME ZONE 'UTC')::date,
+  event text NOT NULL CHECK(event IN ('page_view','started','reply_completed','passed','caught','rejected')),
+  total bigint NOT NULL DEFAULT 0,
+  PRIMARY KEY(budget_id,day,event)
+);
 INSERT INTO last_exit.budget(id,cap_nano) VALUES ('public-v1',1000000000),('preview-v1',100000000)
 ON CONFLICT(id) DO NOTHING;
 
@@ -25,6 +32,11 @@ BEGIN
   ON CONFLICT(id) DO UPDATE SET uses=last_exit.limits.uses+1 RETURNING uses INTO n;
   RETURN n<=maximum;
 END $$;
+
+CREATE OR REPLACE FUNCTION last_exit.count_usage(bid text, kind text) RETURNS void LANGUAGE sql AS $$
+  INSERT INTO last_exit.usage_daily(budget_id,event,total) VALUES(bid,kind,1)
+  ON CONFLICT(budget_id,day,event) DO UPDATE SET total=last_exit.usage_daily.total+1;
+$$;
 
 CREATE OR REPLACE FUNCTION last_exit.begin_turn(sid uuid, version integer, token uuid, bid text, rate_key text, reserve bigint)
 RETURNS jsonb LANGUAGE plpgsql AS $$
@@ -58,5 +70,9 @@ BEGIN
   UPDATE last_exit.budget SET used_nano=used_nano-r.reserved_nano+actual WHERE id=r.budget_id;
   UPDATE last_exit.reservations SET actual_nano=actual WHERE id=token;
   UPDATE last_exit.sessions SET state=updated,lease=NULL,lease_until=NULL WHERE id=sid;
+  PERFORM last_exit.count_usage(r.budget_id,'reply_completed');
+  IF s.state->>'status'='active' AND updated->>'status' IN ('passed','caught','rejected') THEN
+    PERFORM last_exit.count_usage(r.budget_id,updated->>'status');
+  END IF;
   RETURN true;
 END $$;

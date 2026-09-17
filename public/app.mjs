@@ -56,4 +56,4 @@ $('#sound-toggle').onclick=async()=>{
   }else if(audio.state==='running')await audio.suspend();else await audio.resume();
   const on=audio.state==='running';$('#sound-toggle').textContent=on?'Sound on':'Sound off';$('#sound-toggle').setAttribute('aria-pressed',String(on));
 };
-try{const status=await api('/api/status');connected=status.connected;available=status.available!==false;hosted=status.public===true;game=await api('/api/game');render();}catch(e){$('#intro-connection').textContent=`Checkpoint unavailable. ${e.message}`;setBusy(false);}
+try{const status=await api('/api/status');connected=status.connected;available=status.available!==false;hosted=status.public===true;if(hosted)fetch('/api/visit',{method:'POST',headers:{'Content-Type':'application/json'},body:'{}',keepalive:true}).catch(()=>{});game=await api('/api/game');render();}catch(e){$('#intro-connection').textContent=`Checkpoint unavailable. ${e.message}`;setBusy(false);}
