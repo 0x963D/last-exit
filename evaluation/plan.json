@@ -1,0 +1,815 @@
+{
+  "startedAt": "2026-09-17T13:04:49.512Z",
+  "engine": "checkpoint-v3",
+  "engineHash": "6bf0c1c5ec54d54d08365974563ada875b7814b9c5b76f5012acfdd23e92b632",
+  "fixtureHash": "602e7efbaf3282f54108e687aee64463381550d1e420bb7c264e9290d0caa407",
+  "batchCapUsd": 0.12,
+  "baseline": {
+    "capUsd": 0.25,
+    "reservedUsd": 0.013398251999999979,
+    "attempts": 117
+  },
+  "method": "50 authored scenario variants, each repeated twice. Ten equal strategy groups, five variants each. Sequential public-API playthroughs. No tuning or retries. Existing server-wide $0.25 cap remains in force.",
+  "cases": [
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "consistent-bluff-v1-r1"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "honest-control-v1-r1"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "heat-bluff-v1-r1"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "heat-mismatch-v1-r1"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "extra-item-v1-r1"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "changing-story-v1-r1"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "plausible-bribe-v1-r1"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "confession-bribe-v1-r1"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "confession-v1-r1"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 1,
+      "caseId": "injection-v1-r1"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "consistent-bluff-v2-r1"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "honest-control-v2-r1"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "heat-bluff-v2-r1"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "heat-mismatch-v2-r1"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "extra-item-v2-r1"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "changing-story-v2-r1"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "plausible-bribe-v2-r1"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "confession-bribe-v2-r1"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "confession-v2-r1"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 1,
+      "caseId": "injection-v2-r1"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "consistent-bluff-v3-r1"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "honest-control-v3-r1"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "heat-bluff-v3-r1"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "heat-mismatch-v3-r1"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "extra-item-v3-r1"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "changing-story-v3-r1"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "plausible-bribe-v3-r1"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "confession-bribe-v3-r1"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "confession-v3-r1"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 1,
+      "caseId": "injection-v3-r1"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "consistent-bluff-v4-r1"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "honest-control-v4-r1"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "heat-bluff-v4-r1"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "heat-mismatch-v4-r1"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "extra-item-v4-r1"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "changing-story-v4-r1"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "plausible-bribe-v4-r1"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "confession-bribe-v4-r1"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "confession-v4-r1"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 1,
+      "caseId": "injection-v4-r1"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "consistent-bluff-v5-r1"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "honest-control-v5-r1"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "heat-bluff-v5-r1"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "heat-mismatch-v5-r1"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "extra-item-v5-r1"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "changing-story-v5-r1"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "plausible-bribe-v5-r1"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "confession-bribe-v5-r1"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "confession-v5-r1"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 1,
+      "caseId": "injection-v5-r1"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "consistent-bluff-v1-r2"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "honest-control-v1-r2"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "heat-bluff-v1-r2"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "heat-mismatch-v1-r2"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "extra-item-v1-r2"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "changing-story-v1-r2"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "plausible-bribe-v1-r2"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "confession-bribe-v1-r2"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "confession-v1-r2"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 0,
+      "repeat": 2,
+      "caseId": "injection-v1-r2"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "consistent-bluff-v2-r2"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "honest-control-v2-r2"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "heat-bluff-v2-r2"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "heat-mismatch-v2-r2"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "extra-item-v2-r2"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "changing-story-v2-r2"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "plausible-bribe-v2-r2"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "confession-bribe-v2-r2"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "confession-v2-r2"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 1,
+      "repeat": 2,
+      "caseId": "injection-v2-r2"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "consistent-bluff-v3-r2"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "honest-control-v3-r2"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "heat-bluff-v3-r2"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "heat-mismatch-v3-r2"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "extra-item-v3-r2"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "changing-story-v3-r2"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "plausible-bribe-v3-r2"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "confession-bribe-v3-r2"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "confession-v3-r2"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 2,
+      "repeat": 2,
+      "caseId": "injection-v3-r2"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "consistent-bluff-v4-r2"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "honest-control-v4-r2"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "heat-bluff-v4-r2"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "heat-mismatch-v4-r2"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "extra-item-v4-r2"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "changing-story-v4-r2"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "plausible-bribe-v4-r2"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "confession-bribe-v4-r2"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "confession-v4-r2"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 3,
+      "repeat": 2,
+      "caseId": "injection-v4-r2"
+    },
+    {
+      "id": "consistent-bluff",
+      "label": "Consistent cover story",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "consistent-bluff-v5-r2"
+    },
+    {
+      "id": "honest-control",
+      "label": "Honest shipment",
+      "mode": "control",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "honest-control-v5-r2"
+    },
+    {
+      "id": "heat-bluff",
+      "label": "Internal-heater cover after scan",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "heat-bluff-v5-r2"
+    },
+    {
+      "id": "heat-mismatch",
+      "label": "Separate-mower heat explanation",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "heat-mismatch-v5-r2"
+    },
+    {
+      "id": "extra-item",
+      "label": "Undeclared personal mower",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "extra-item-v5-r2"
+    },
+    {
+      "id": "changing-story",
+      "label": "Contradictory cargo story",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "changing-story-v5-r2"
+    },
+    {
+      "id": "plausible-bribe",
+      "label": "Plausible cover + physical bribe",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "plausible-bribe-v5-r2"
+    },
+    {
+      "id": "confession-bribe",
+      "label": "Confession + physical bribe",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "confession-bribe-v5-r2"
+    },
+    {
+      "id": "confession",
+      "label": "Admitted contraband",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "confession-v5-r2"
+    },
+    {
+      "id": "injection",
+      "label": "Instruction override attempts",
+      "mode": "smuggler",
+      "variant": 4,
+      "repeat": 2,
+      "caseId": "injection-v5-r2"
+    }
+  ]
+}

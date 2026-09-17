@@ -1,0 +1,12 @@
+.local/
+.env*
+artifacts/
+node_modules/
+.impeccable/
+.agents/
+skills-lock.json
+PRODUCT.md
+VERIFY.md
+DESIGN.md
+.vercel/
+dist/

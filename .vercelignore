@@ -1,0 +1,17 @@
+.local
+.env*
+artifacts
+.impeccable
+.git
+tests
+scripts
+VERIFY.md
+PRODUCT.md
+DESIGN.md
+server.mjs
+game-v1.mjs
+.agents
+skills-lock.json
+public/setup.html
+public/setup.mjs
+evaluation

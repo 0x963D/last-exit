@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "framework": null,
+  "outputDirectory": "public",
+  "functions": {"api/index.mjs": {"maxDuration": 60}},
+  "rewrites": [{"source":"/api/:path*","destination":"/api?route=:path*"},{"source":"/design","destination":"/design.html"},{"source":"/findings","destination":"/findings.html"}],
+  "headers": [{"source":"/(.*)","headers":[
+    {"key":"X-Content-Type-Options","value":"nosniff"},
+    {"key":"Referrer-Policy","value":"no-referrer"},
+    {"key":"Content-Security-Policy","value":"default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'"}
+  ]}]
+}
